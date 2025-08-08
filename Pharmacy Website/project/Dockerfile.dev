@@ -1,0 +1,32 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+RUN apk add --no-cache \
+    git \
+    curl \
+    sqlite \
+    openssl
+
+RUN addgroup -g 1001 -S nodejs
+RUN adduser -S nuxt -u 1001
+
+COPY package*.json ./
+COPY prisma ./prisma/
+
+RUN npm ci
+
+RUN npx prisma generate
+
+COPY --chown=nuxt:nodejs . .
+
+RUN mkdir -p ./public/uploads ./logs
+RUN chown -R nuxt:nodejs ./public/uploads ./logs
+
+EXPOSE 3000
+
+# Health check
+# HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+#   CMD curl -f http://localhost:3000/api/health || exit 1
+
+CMD ["npm", "run", "dev"]

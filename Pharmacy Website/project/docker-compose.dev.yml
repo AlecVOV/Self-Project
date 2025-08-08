@@ -1,0 +1,87 @@
+services:
+  app-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: medipharm-app-dev
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+      - "24678:24678"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=file:./dev.db
+      - JWT_SECRET=dev-jwt-secret-change-in-production
+      - JWT_REFRESH_SECRET=dev-refresh-secret-change-in-production
+      - JWT_EXPIRES_IN=1h
+      - JWT_REFRESH_EXPIRES_IN=7d
+      - NUXT_PUBLIC_API_BASE=/api
+      - NUXT_PUBLIC_APP_NAME=MediPharm
+      - UPLOAD_DIR=./public/uploads
+      # - REDIS_URL=redis://redis-dev:6379
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - ./uploads:/app/public/uploads
+      - ./logs:/app/logs
+    networks:
+      - medipharm-dev-network
+    # depends_on:
+    #   - redis-dev
+    command: >
+      sh -c "
+        echo 'Waiting for services to be ready...' &&
+        sleep 5 &&
+        echo 'Generating Prisma client...' &&
+        npx prisma generate &&
+        echo 'Pushing database schema...' &&
+        npx prisma db push &&
+        echo 'Seeding database...' &&
+        npm run db:seed &&
+        echo 'Starting development server...' &&
+        npm run dev
+      "
+
+  # redis-dev:
+  #   image: redis:7-alpine
+  #   container_name: medipharm-redis-dev
+  #   restart: unless-stopped
+  #   ports:
+  #     - "6379:6379"
+  #   volumes:
+  #     - redis-dev-data:/data
+  #   networks:
+  #     - medipharm-dev-network
+  #   command: redis-server --appendonly yes
+  #   healthcheck:
+  #     test: ["CMD", "redis-cli", "ping"]
+  #     interval: 30s
+  #     timeout: 3s
+  #     retries: 3
+
+  prisma-studio:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: medipharm-prisma-studio
+    restart: unless-stopped
+    ports:
+      - "5555:5555"
+    environment:
+      - DATABASE_URL=file:./dev.db
+    volumes:
+      - .:/app
+      - /app/node_modules
+    networks:
+      - medipharm-dev-network
+    command: npx prisma studio --hostname 0.0.0.0
+    depends_on:
+      - app-dev
+
+# volumes:
+#   redis-dev-data:
+#     driver: local
+
+networks:
+  medipharm-dev-network:
+    driver: bridge
