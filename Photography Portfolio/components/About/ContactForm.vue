@@ -55,6 +55,7 @@
         type="submit" 
         class="btn btn-primary w-full"
         :disabled="isSubmitting"
+        :class="{ 'opacity-50 cursor-not-allowed hover:scale-100': isSubmitting }"
       >
         <span v-if="isSubmitting">Sending...</span>
         <span v-else>Send Message</span>

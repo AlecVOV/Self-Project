@@ -8,6 +8,10 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@vueuse/motion/nuxt'
   ],
+  css: [
+    '~/assets/css/main.css',
+    '~/assets/css/animations.css'
+  ],
   googleFonts: {
     families: {
       'Playfair+Display': [400, 500, 600, 700],

@@ -1,20 +1,14 @@
 <template>
   <header 
     ref="header" 
-    class="fixed w-full z-50 transition-all duration-500"
+    class="fixed w-full z-50 transition-all duration-300 fade-in"
     :class="{ 'bg-white/90 dark:bg-primary-900/90 backdrop-blur-md shadow-md': isScrolled }"
-    v-motion
-    :initial="{ opacity: 0, y: -50 }"
-    :enter="{ opacity: 1, y: 0, transition: { duration: 800, ease: 'easeOut' } }"
   >
     <div class="container-custom py-4 md:py-6">
       <div class="flex items-center justify-between">
         <NuxtLink 
           to="/" 
-          class="text-2xl font-serif tracking-wider transform transition-all duration-300 hover:scale-105"
-          v-motion
-          :initial="{ opacity: 0, x: -30 }"
-          :enter="{ opacity: 1, x: 0, transition: { delay: 200, duration: 600 } }"
+          class="text-2xl font-serif tracking-wider transition-colors duration-300"
         >
           LENS<span class="text-accent-600">CRAFT</span>
         </NuxtLink>
@@ -25,21 +19,15 @@
               v-for="(item, index) in menuItems" 
               :key="index" 
               :to="item.path"
-              class="nav-link hover:text-accent-600 transition-colors duration-300 text-sm tracking-wide uppercase transform hover:scale-105"
+              class="nav-underline hover:text-accent-600 transition-colors duration-300 text-sm tracking-wide uppercase"
               active-class="text-accent-600"
-              v-motion
-              :initial="{ opacity: 0, y: -20 }"
-              :enter="{ opacity: 1, y: 0, transition: { delay: 300 + (index * 100), duration: 500 } }"
             >
               {{ item.name }}
             </NuxtLink>
           </nav>
           <button 
             @click="toggleDarkMode" 
-            class="p-3 hover:bg-primary-100 dark:hover:bg-primary-800 rounded-full transition-all duration-300 transform hover:scale-110 hover:rotate-12 cursor-pointer"
-            v-motion
-            :initial="{ opacity: 0, scale: 0.8 }"
-            :enter="{ opacity: 1, scale: 1, transition: { delay: 600, duration: 500 } }"
+            class="p-3 hover:bg-primary-100 dark:hover:bg-primary-800 rounded-full transition-all duration-200 ease-out cursor-pointer hover:scale-105"
           >
             <span v-if="isDarkMode" class="sr-only">Light mode</span>
             <span v-else class="sr-only">Dark mode</span>
@@ -56,10 +44,7 @@
         
         <button 
           @click="isMobileMenuOpen = !isMobileMenuOpen" 
-          class="md:hidden p-2 transform transition-all duration-300 hover:scale-110"
-          v-motion
-          :initial="{ opacity: 0, scale: 0.8 }"
-          :enter="{ opacity: 1, scale: 1, transition: { delay: 400, duration: 500 } }"
+          class="md:hidden p-2 transition-all duration-200 ease-out hover:scale-105"
         >
           <span class="sr-only">Toggle menu</span>
           <Transition name="fade" mode="out-in">
@@ -91,21 +76,15 @@
               v-for="(item, index) in menuItems" 
               :key="index" 
               :to="item.path"
-              class="block hover:text-accent-600 transition-all duration-300 text-lg py-2 transform hover:translate-x-2"
+              class="block hover:text-accent-600 transition-colors duration-300 text-lg py-2"
               active-class="text-accent-600"
               @click="isMobileMenuOpen = false"
-              v-motion
-              :initial="{ opacity: 0, x: -30 }"
-              :visible="{ opacity: 1, x: 0, transition: { delay: index * 100, duration: 400 } }"
             >
               {{ item.name }}
             </NuxtLink>
             <button 
               @click="toggleDarkMode" 
-              class="flex items-center space-x-3 w-full py-2 hover:text-accent-600 transition-colors duration-300"
-              v-motion
-              :initial="{ opacity: 0, x: -30 }"
-              :visible="{ opacity: 1, x: 0, transition: { delay: menuItems.length * 100, duration: 400 } }"
+              class="flex items-center space-x-3 w-full py-2 hover:text-accent-600 transition-all duration-200 ease-out hover:scale-105"
             >
               <span>{{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}</span>
               <Transition name="fade" mode="out-in">

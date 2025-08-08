@@ -3,27 +3,6 @@
     <HomeHeroSlider />
     
     <HomeFeaturedWork />
-
-    <!-- <section class="section bg-white dark:bg-primary-900">
-      <div class="container-custom">
-        <div 
-          class="max-w-3xl mx-auto text-center"
-          v-motion
-          :initial="{ opacity: 0, y: 30 }"
-          :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 800, ease: 'backOut', delay: 800 } }"
-        >
-          <h2 class="section-title">Capturing Life's Beautiful Moments</h2>
-          <p class="text-lg mb-8">
-            Specializing in weddings, portraits, and landscapes, I bring a keen artistic eye and technical expertise 
-            to every shoot. My passion is creating timeless images that tell your unique story.
-          </p>
-          <NuxtLink to="/about" class="btn btn-primary">
-            Learn About My Approach
-          </NuxtLink>
-        </div>
-      </div>
-    </section> -->
-
     <section class="section bg-primary-50 dark:bg-primary-900">
       <div class="container-custom">
         <div class="max-w-3xl mx-auto text-center">
@@ -43,14 +22,14 @@
           >
             <h2 class="section-title">Capturing Life's Beautiful Moments</h2>
             <p class="text-lg mb-8">
-              Specializing in weddings, portraits, and landscapes, I bring a keen artistic eye and technical expertise to every shoot. My passion is creating timeless images that tell your unique story.
+              Life so short, every moment we have been though will be precious and priceless, deep dive with me in my world and see my point of view and feeing via images. My passion is creating timeless images that tell your unique story.
             </p>
             
             <!-- Enhanced button animations with stagger effect -->
             <div class="flex justify-center">
               <NuxtLink 
                 to="/about" 
-                class="btn btn-primary transform transition-all pulse-glow duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-primary-500/25"
+                class="btn btn-primary"
                 v-motion
                 :initial="{ opacity: 0, y: 30 }"
                 :visibleOnce="{ 
@@ -90,17 +69,16 @@
               } 
             }"
           >
-            <h2 class="section-title">Ready to Create Something Beautiful?</h2>
+            <h2 class="section-title">Ready to discover your beauty though my lens?</h2>
             <p class="text-lg mb-8">
-              Let's work together to capture your special moments. Whether you're planning a wedding, 
-              need portraits, or want to showcase your products, I'm here to bring your vision to life.
+              Let's work together to capture your special moments. Whether you're planning for a small concepts, street photos or family pictures, I'm here to bring your vision to life.
             </p>
             
             <!-- Enhanced button animations with stagger effect -->
             <div class="flex flex-col sm:flex-row gap-4">
               <NuxtLink 
                 to="/about" 
-                class="btn btn-primary transform transition-all pulse-glow duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-primary-500/25"
+                class="btn btn-primary"
                 v-motion
                 :initial="{ opacity: 0, y: 30 }"
                 :visibleOnce="{ 
@@ -118,7 +96,7 @@
               
               <NuxtLink 
                 to="/portfolio" 
-                class="btn btn-primary transform transition-all pulse-glow duration-500 hover:scale-110 hover:shadow-2xl"
+                class="btn btn-primary"
                 v-motion
                 :initial="{ opacity: 0, y: 30 }"
                 :visibleOnce="{ 
@@ -142,8 +120,8 @@
             :visibleOnce="{ opacity: 1, x: 0, transition: { duration: 800 } }"
           >
             <img 
-              src="https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-              alt="Beautiful portrait photography" 
+              src="https://res.cloudinary.com/dqved9nx9/image/upload/v1754670215/IMG_20250201_011838_741_qvmd1d.webp" 
+              alt="My portrait" 
               class="w-full h-auto rounded-sm shadow-lg"
             />
           </div>

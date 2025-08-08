@@ -7,7 +7,7 @@
         :initial="{ opacity: 0, y: 30 }"
         :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 800 } }"
       >
-        Client Testimonials
+        Peer Review
       </h2>
       
       <div class="relative">
@@ -46,7 +46,7 @@
               v-for="(testimonial, index) in testimonials" 
               :key="testimonial.id"
               @click="currentTestimonial = index"
-              class="w-3 h-3 rounded-full transition-all duration-300"
+              class="w-3 h-3 rounded-full transition-all duration-200 ease-out hover:scale-105"
               :class="currentTestimonial === index ? 'bg-accent-600 scale-125' : 'bg-primary-300 hover:bg-accent-500'"
               aria-label="Show testimonial"
             ></button>

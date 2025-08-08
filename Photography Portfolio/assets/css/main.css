@@ -1,32 +1,40 @@
+/* stylelint-disable-next-line at-rule-no-unknown */
 @tailwind base;
+/* stylelint-disable-next-line at-rule-no-unknown */
 @tailwind components;
+/* stylelint-disable-next-line at-rule-no-unknown */
 @tailwind utilities;
 
 @layer base {
   html {
     @apply scroll-smooth;
   }
-  
+
   body {
     @apply bg-white dark:bg-primary-900 text-primary-800 dark:text-primary-100 font-sans;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif leading-tight;
   }
-  
+
   h1 {
     @apply text-3xl md:text-4xl lg:text-5xl;
   }
-  
+
   h2 {
     @apply text-2xl md:text-3xl lg:text-4xl;
   }
-  
+
   h3 {
     @apply text-xl md:text-2xl lg:text-3xl;
   }
-  
+
   p {
     @apply leading-relaxed;
   }
@@ -41,80 +49,59 @@
   .container-custom {
     @apply container mx-auto px-4 md:px-6 lg:px-8;
   }
-  
-  /* Enhanced button animations */
+
+  /* Simplified button base styles with consistent hover effects */
   .btn {
-    @apply px-4 py-2 rounded-sm font-medium relative overflow-hidden;
-    @apply transform transition-all duration-300 ease-out;
-    @apply hover:scale-105 hover:shadow-lg active:scale-95;
+    @apply px-4 py-2 rounded-sm font-medium;
+    @apply transition-all duration-200 ease-out;
   }
-  
-  .btn::before {
-    content: '';
-    @apply absolute inset-0 bg-white/20 transform -translate-x-full;
-    @apply transition-transform duration-500 ease-out;
+
+  .btn:hover {
+    @apply transform scale-105;
   }
-  
-  .btn:hover::before {
-    @apply translate-x-0;
+
+  .btn:active {
+    transform: scale(1.02);
   }
-  
+
   .btn-primary {
     @apply bg-primary-800 text-white hover:bg-primary-700 dark:bg-accent-600 dark:hover:bg-accent-500 dark:text-primary-900;
-    @apply shadow-md hover:shadow-xl transition-shadow duration-300;
     @apply border-0 outline-none;
   }
-  
+
   .btn-outline {
-    @apply border border-primary-800 text-primary-800 hover:bg-primary-800 hover:text-white 
-           dark:border-accent-600 dark:text-accent-600 dark:hover:bg-accent-600 dark:hover:text-primary-900;
-    @apply hover:shadow-lg transition-all duration-300;
+    @apply border border-primary-800 text-primary-800 hover:bg-primary-800 hover:text-white dark:border-accent-600 dark:text-accent-600 dark:hover:bg-accent-600 dark:hover:text-primary-900;
   }
-  
+
   .section {
     @apply py-16 md:py-24;
   }
-  
+
   .section-title {
     @apply font-serif text-3xl md:text-4xl mb-8 md:mb-12;
   }
-  
-  /* Enhanced image hover effects */
+
+  /* Simplified image hover effects */
   .gallery-img-container {
     @apply overflow-hidden relative;
-    @apply transform transition-all duration-500 ease-out;
-    @apply hover:shadow-2xl hover:-translate-y-2;
   }
-  
+
   .gallery-img {
-    @apply w-full h-full object-cover transition-all duration-700 ease-out;
-    @apply group-hover:scale-110 group-hover:brightness-110;
+    @apply w-full h-full object-cover;
   }
 
-  /* Card hover animations */
+  /* Simplified card hover animations */
   .card {
-    @apply transform transition-all duration-300 ease-out;
-    @apply hover:scale-105 hover:shadow-xl hover:-translate-y-1;
+    @apply shadow-md;
   }
 
-  /* Floating animation for elements */
-  .float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  /* Pulse animation for call-to-action elements */
-  .pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite alternate;
-  }
-
-  /* Stagger animation utility */
-  .stagger-item {
-    @apply transform transition-all duration-500 ease-out;
-  }
-
-  /* Navigation hover effects */
+  /* Navigation hover effects with consistent scale and color transition */
   .nav-link {
-    @apply relative overflow-hidden transition-colors duration-300;
+    @apply relative overflow-hidden transition-all duration-200 ease-out;
+  }
+
+  .nav-link:hover {
+    @apply transform scale-105;
   }
 
   .nav-link::after {
@@ -127,107 +114,19 @@
     @apply w-full;
   }
 
-  /* Loading animations */
-  .loading-shimmer {
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    background-size: 200% 100%;
-    animation: shimmer 1.5s infinite;
-  }
-
-  /* Text reveal animation */
-  .text-reveal {
-    overflow: hidden;
-    position: relative;
-  }
-
-  .text-reveal::before {
-    content: '';
-    @apply absolute inset-0 bg-primary-800 dark:bg-accent-600;
-    @apply transform translate-x-0;
-    animation: text-reveal 1s ease-out forwards;
+  /* Simplified loading animation */
+  .loading-simple {
+    @apply opacity-50;
   }
 }
 
-/* Keyframe animations */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
+/* Removed complex keyframe animations - replaced with utility classes */
 
-@keyframes pulse-glow {
-  0% {
-    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
-  }
-  100% {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.4);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-@keyframes text-reveal {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-/* Enhanced page transitions */
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-              transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.page-enter-from,
-.page-leave-to {
-  opacity: 0;
-  transform: translateY(20px) scale(0.98);
-}
-
-/* Smooth fade transitions */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-
-/* Enhanced slide transitions */
-.slide-enter-active,
-.slide-leave-active {
-  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-              opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.slide-enter-from {
-  transform: translateX(30px);
-  opacity: 0;
-}
-
-.slide-leave-to {
-  transform: translateX(-30px);
-  opacity: 0;
-}
+/* Simplified page transitions - moved to animations.css */
 
 /* Responsive animation preferences */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {

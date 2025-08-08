@@ -23,10 +23,10 @@
           >
             Capturing life's most precious moments through the artistic eye of a passionate photographer.
           </p>
-          <div class="flex space-x-4 mt-6">
+          <!-- <div class="flex space-x-4 mt-6">
             <a 
               href="#" 
-              class="text-primary-600 dark:text-primary-300 hover:text-accent-600 dark:hover:text-accent-500 transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 p-2 rounded-full hover:bg-accent-600/10"
+              class="text-primary-600 dark:text-primary-300 hover:text-accent-600 dark:hover:text-accent-500 transform transition-all duration-200 ease-out hover:scale-105 p-2 rounded-full hover:bg-accent-600/10"
               v-motion
               :initial="{ opacity: 0, scale: 0.8 }"
               :visibleOnce="{ opacity: 1, scale: 1, transition: { delay: 400, duration: 400 } }"
@@ -38,7 +38,7 @@
             </a>
             <a 
               href="#" 
-              class="text-primary-600 dark:text-primary-300 hover:text-accent-600 dark:hover:text-accent-500 transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 p-2 rounded-full hover:bg-accent-600/10"
+              class="text-primary-600 dark:text-primary-300 hover:text-accent-600 dark:hover:text-accent-500 transform transition-all duration-200 ease-out hover:scale-105 p-2 rounded-full hover:bg-accent-600/10"
               v-motion
               :initial="{ opacity: 0, scale: 0.8 }"
               :visibleOnce="{ opacity: 1, scale: 1, transition: { delay: 500, duration: 400 } }"
@@ -50,7 +50,7 @@
             </a>
             <a 
               href="#" 
-              class="text-primary-600 dark:text-primary-300 hover:text-accent-600 dark:hover:text-accent-500 transform transition-all duration-300 hover:scale-110 hover:-translate-y-1 p-2 rounded-full hover:bg-accent-600/10"
+              class="text-primary-600 dark:text-primary-300 hover:text-accent-600 dark:hover:text-accent-500 transform transition-all duration-200 ease-out hover:scale-105 p-2 rounded-full hover:bg-accent-600/10"
               v-motion
               :initial="{ opacity: 0, scale: 0.8 }"
               :visibleOnce="{ opacity: 1, scale: 1, transition: { delay: 600, duration: 400 } }"
@@ -60,7 +60,7 @@
                 <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
               </svg>
             </a>
-          </div>
+          </div> -->
         </div>
         
         <div 
@@ -73,7 +73,7 @@
             <li>
               <NuxtLink 
                 to="/about" 
-                class="nav-link hover:text-accent-600 transition-all duration-300 transform hover:translate-x-1"
+                class="nav-link hover:text-accent-600 transition-all duration-200 ease-out"
               >
                 About
               </NuxtLink>
@@ -81,7 +81,7 @@
             <li>
               <NuxtLink 
                 to="/portfolio" 
-                class="nav-link hover:text-accent-600 transition-all duration-300 transform hover:translate-x-1"
+                class="nav-link hover:text-accent-600 transition-all duration-200 ease-out"
               >
                 Portfolio
               </NuxtLink>
@@ -89,7 +89,7 @@
             <li>
               <NuxtLink 
                 to="/blog" 
-                class="nav-link hover:text-accent-600 transition-all duration-300 transform hover:translate-x-1"
+                class="nav-link hover:text-accent-600 transition-all duration-200 ease-out"
               >
                 Blog
               </NuxtLink>
@@ -97,7 +97,7 @@
             <li>
               <NuxtLink 
                 to="/faq" 
-                class="nav-link hover:text-accent-600 transition-all duration-300 transform hover:translate-x-1"
+                class="nav-link hover:text-accent-600 transition-all duration-200 ease-out"
               >
                 FAQ
               </NuxtLink>
@@ -112,24 +112,30 @@
         >
           <h4 class="font-serif text-lg mb-4">Contact Info</h4>
           <div class="space-y-2 text-sm">
-            <p class="flex items-center hover:text-accent-600 transition-colors duration-300">
+            <p class="flex items-center hover:text-accent-600 transition-all duration-200 ease-out hover:scale-105">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              hello@lenscraft.com
+              lhtthong.forwork@gmail.com
             </p>
-            <p class="flex items-center hover:text-accent-600 transition-colors duration-300">
+            <p class="flex items-center hover:text-accent-600 transition-all duration-200 ease-out hover:scale-105">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              lhtthong.forwork@outlook.com
+            </p>
+            <p class="flex items-center hover:text-accent-600 transition-all duration-200 ease-out hover:scale-105">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              +1 (555) 123-4567
+              +84 947 685 335
             </p>
-            <p class="flex items-center hover:text-accent-600 transition-colors duration-300">
+            <p class="flex items-center hover:text-accent-600 transition-all duration-200 ease-out hover:scale-105">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              New York, NY
+              Ho Chi Minh city, Viet Nam
             </p>
           </div>
         </div>
@@ -141,7 +147,7 @@
         :initial="{ opacity: 0 }"
         :visibleOnce="{ opacity: 1, transition: { delay: 800, duration: 600 } }"
       >
-        <p class="hover:text-accent-600 transition-colors duration-300">
+        <p class="hover:text-accent-600 transition-all duration-200 ease-out hover:scale-105">
           © {{ new Date().getFullYear() }} LensCraft Photography. All rights reserved.
         </p>
       </div>
