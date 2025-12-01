@@ -36,7 +36,7 @@
                 My photography style can be described as a blend of documentary and fine art approaches. I believe in capturing authentic moments as they unfold naturally, while also creating deliberately composed artistic images that stand the test of time.
               </p>
               <p>
-                For every session, I take time to understand your vision and preferences, allowing me to tailor my approach to your unique story. Whether documenting a wedding day or creating portraits, I focus on genuine emotion and meaningful connections.
+                For every session, I take time to understand your vision and preferences, allowing me to tailor my approach to your unique story. I focus on genuine emotion and meaningful connections.
               </p>
               <p>
                 I use a combination of natural light and professional lighting equipment to create images with depth, dimension, and mood. My post-processing workflow enhances each image while maintaining natural skin tones and authentic colors.

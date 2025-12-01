@@ -10,13 +10,13 @@
         <h2 class="font-serif text-3xl md:text-4xl mb-6">The Story Behind the Lens</h2>
         <div class="space-y-4 text-primary-700 dark:text-primary-300">
           <p>
-            With over a decade of experience capturing life's most precious moments, I've developed a unique style that blends artistry with authenticity. My journey began with a simple camera gifted by my grandfather, and has evolved into a lifelong passion for visual storytelling.
+            With over a 3 years of experience capturing life's most precious moments, I've developed a unique style that blends artistry with authenticity. My journey began with a camera that I used my tuition fee when I was first in college to buy it, and has evolved into a lifelong passion for visual storytelling.
           </p>
           <p>
-            I believe photography is about more than just beautiful images—it's about preserving emotions, connections, and moments that might otherwise be forgotten. Whether I'm photographing a quiet landscape at dawn or the joyful tears at a wedding, I approach each assignment with the same dedication to excellence and authentic representation.
+            I believe photography is about more than just beautiful images—it's about preserving emotions, connections, and moments that might otherwise be forgotten. Whether I'm photographing a quiet landscape at dawn or the peaceful environment in the middle of no where, I approach each assignment with the same dedication to excellence and authentic representation.
           </p>
           <p>
-            When I'm not behind the camera, you'll find me exploring new locations, experimenting with different techniques, or spending time with my family. I bring this balanced perspective to all my work, allowing me to connect with clients and subjects in a meaningful way.
+            When I'm not behind the camera, you'll find me exploring new locations on the internet, experimenting with different techniques, or spending time with my family. I bring this balanced perspective to all my work, allowing me to connect with clients and subjects in a meaningful way.
           </p>
           <p>
             I look forward to the opportunity to tell your story through my lens.
@@ -58,7 +58,7 @@
       >
         <div class="relative">
           <img 
-            src="https://images.pexels.com/photos/5691341/pexels-photo-5691341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            src="https://res.cloudinary.com/dqved9nx9/image/upload/v1754670214/IMG_20250201_011838_988_ecfzaf.webp" 
             alt="Photographer portrait" 
             class="w-full rounded-sm shadow-lg"
           />

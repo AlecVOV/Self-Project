@@ -29,7 +29,7 @@
             <div class="flex justify-center">
               <NuxtLink 
                 to="/about" 
-                class="btn btn-primary"
+                class="btn btn-primary hover-scale-sm"
                 v-motion
                 :initial="{ opacity: 0, y: 30 }"
                 :visibleOnce="{ 
@@ -78,7 +78,7 @@
             <div class="flex flex-col sm:flex-row gap-4">
               <NuxtLink 
                 to="/about" 
-                class="btn btn-primary"
+                class="btn btn-primary hover-scale-sm"
                 v-motion
                 :initial="{ opacity: 0, y: 30 }"
                 :visibleOnce="{ 
@@ -96,7 +96,7 @@
               
               <NuxtLink 
                 to="/portfolio" 
-                class="btn btn-primary"
+                class="btn btn-primary hover-scale-sm"
                 v-motion
                 :initial="{ opacity: 0, y: 30 }"
                 :visibleOnce="{ 

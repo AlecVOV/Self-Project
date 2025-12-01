@@ -69,7 +69,7 @@
       >
         <NuxtLink 
           to="/portfolio" 
-          class="border-2 border-yellow-400 bg-yellow-300 text-black px-6 py-2 font-medium group inline-flex items-center transform transition-all duration-200 ease-out hover:scale-105"
+          class="btn btn-primary hover-scale-sm inline-flex items-center"
         >
           View All Work
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 inline-block transform transition-transform duration-200 ease-out group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -12,15 +12,18 @@ export default defineNuxtConfig({
     '~/assets/css/main.css',
     '~/assets/css/animations.css'
   ],
+  runtimeConfig: {
+    public: {
+      web3formsKey1: process.env.NUXT_PUBLIC_WEB3FORMS_KEY1 || '',
+      web3formsKey2: process.env.NUXT_PUBLIC_WEB3FORMS_KEY2 || ''
+    }
+  },
   googleFonts: {
     families: {
       'Playfair+Display': [400, 500, 600, 700],
       'Montserrat': [300, 400, 500, 600]
     },
     display: 'swap'
-  },
-  content: {
-    documentDriven: true
   },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
@@ -30,7 +33,7 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Professional photography portfolio showcasing stunning visuals and artistic excellence' }
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/favicon.png' }
+        { rel: 'icon', type: 'image/png', href: '/web_icon.png' }
       ]
     }
   }
