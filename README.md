@@ -16,3 +16,6 @@ A fully prompted project using Amazon Q for a simple snake game implementation.
 
 ### Web Scraping Python
 A Python project that demonstrates web scraping techniques to extract data from Wikipedia for personal English learning.
+
+### Recruitment Website For HR
+This project is from my Computing Technology Inquiry Project - COS10026 (Assignment 2) unit at Swinburne University of Technology. A recruitment website designed for HR purposes, featuring job listings, application forms, and company information.
