@@ -1,2 +1,18 @@
 # Self-Project
-Python-based projects focused on AI-driven prompt engineering and high-value documentation. This repository showcases code that leverages artificial intelligence to create and enhance project documentation, demonstrating advanced prompt engineering practices. Ideal for developers aiming to integrate AI with Python and improve documentation quality.
+
+## 🗂️ Projects:
+
+### Ice Cream Website
+This project is from my COS10005 Web Development (Assignment 2) unit at Swinburne University of Technology. The website showcases a variety of ice cream products, complete with descriptions, prices, and an option to order online.
+
+### Pharmacy Website
+This project is from my SWE30003 Software Architecture (Final POC) unit at Swinburne University of Technology. The website provides information about managing a web pharmacy, including services offered, contact details, and an about us section.
+
+### Photography Portfolio
+My personal photography portfolio website showcasing photography work, including galleries, project descriptions, and contact information.
+
+### Snake Game Project
+A fully prompted project using Amazon Q for a simple snake game implementation.
+
+### Web Scraping Python
+A Python project that demonstrates web scraping techniques to extract data from Wikipedia for personal English learning.

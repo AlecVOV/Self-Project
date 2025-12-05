@@ -1,0 +1,1050 @@
+/* Define CSS variables */
+:root {
+  --color-primary: #9d8b6f;
+  --color-background: #fffcdd;
+  --color-text: #000000;
+  --color-light: #ffffff;
+  --color-secondary: saddlebrown;
+  --color-accent: #df7c3e;
+
+  --font-heading: 'Brush Script MT', cursive;
+  --font-body: 'Open Sans', sans-serif;
+  --font-nav: "Poppins", sans-serif;
+  --font-handwritten: "Shantell Sans", cursive;
+
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+
+  --border-radius-sm: 5px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 1em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+---------------------------------
+---------------------------------
+------SECTION: Background--------
+---------------------------------
+---------------------------------
+*/
+
+body {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  font-family: var(--font-body);
+  background: var(--color-background);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+---------------------------------
+---------------------------------
+-SECTION: Logo + Navigation Bar--
+---------------------------------
+---------------------------------
+*/
+.logo {
+  width: 100px;
+}
+
+#dropdown-btn {
+  appearance: none;
+  display: none;
+  cursor: pointer;
+}
+
+#icon-dropdown-btn {
+  display: none;
+}
+
+nav {
+  font-family: var(--font-nav);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent !important;
+  padding: var(--spacing-sm);
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right:.0;
+  z-index: 3;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--color-light);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+nav ul a {
+  padding: var(--spacing-xs);
+  transition: color 0.5s ease;
+  font-weight: bold;
+}
+
+nav ul a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+.active {
+  opacity: 1;
+  color: var(--color-secondary) !important;
+  text-decoration: underline;
+}
+
+/*
+---------------------------------
+---------------------------------
+---------SECTION: Banner---------
+---------------------------------
+---------------------------------
+*/
+.banner {
+  height: auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: url('banner.png');
+  background-position: 50% 0%;
+  height: 600px !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.banner h1 {
+  font-family: var(--font-heading);
+  font-size: 4em;
+  color: var(--color-text);
+  margin-bottom: 0.2em;
+  margin-top: 0;
+}
+
+.banner section {
+  font-family: var(--font-handwritten);
+  width: 65%;
+  margin-bottom: 3%;
+  margin-left: 3%;
+  padding: var(--spacing-sm);
+  text-align: left;
+  border: 1px solid var(--color-text);
+  border-radius: var(--border-radius-md);
+}
+
+/*
+---------------------------------
+---------------------------------
+----- SECTION: Body (Menu) ------
+--------- (Index Page) ----------
+---------------------------------
+*/
+.menu {
+  text-align: center;
+}
+
+#menu .menu_header h1 {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 4em;
+  padding-top: 30px;
+  color: var(--color-text);
+  margin: auto;
+  line-height: 50px;
+}
+
+.menu_body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg) 0;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.ice_cream_type {
+  margin: 10px;
+  padding: 22px;
+  width: 300px;
+  cursor: pointer;
+  transition: 0.9s;
+  box-sizing: border-box;
+  line-break: auto;
+  border-radius: var(--border-radius-lg);
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ice_cream_type figure {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.ice_cream_type img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+}
+
+.ice_cream_name {
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--color-light);
+}
+
+.ice_cream_price {
+  font-style: italic;
+  color: var(--color-light);
+}
+
+.ice_cream_type:hover .ice_cream_name,
+.ice_cream_type:hover .ice_cream_price,
+.ice_cream_type:hover .ice_cream_description {
+  color: var(--color-text);
+  transition: 0.4s;
+}
+
+.ice_cream_type:hover,
+.ice_cream_type:hover img {
+  border: 2px solid var(--color-text);
+}
+
+.ice_cream_description {
+  text-align: left;
+  margin: 14px;
+  color: var(--color-light);
+}
+
+.ice_cream_description p {
+  display: inline;
+  height: 30px;
+  width: 30px;
+  transition: 0.4s;
+}
+
+.ice_cream_description a:hover {
+  transform: scale(1.5);
+}
+
+.ice_cream_description a i {
+  color: #444;
+}
+
+.ice_cream_type:hover {
+  background: #faf8f8;
+  border-radius: 12px;
+}
+
+.buynow-btn {
+  text-decoration: none;
+  background-color: var(--color-light);
+  width: 95%;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: var(--color-text);
+  flex: 1;
+  padding: 8px 16px;
+  text-align: center;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 20px;
+  transition: all 400ms ease;
+  border: 2px solid var(--color-text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.buynow-btn:hover {
+  text-decoration: underline;
+  background-color: var(--color-text);
+  color: var(--color-light);
+}
+
+/* Product card styles */
+.product-card {
+  background-color: var(--color-light);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+.product-card__title {
+  font-family: var(--font-heading);
+  color: var(--color-secondary);
+}
+
+.product-card__button {
+  background-color: var(--color-accent);
+  color: var(--color-light);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+}
+
+/*
+---------------------------------
+---------------------------------
+--- SECTION: Apply for 2 Form ---
+---------------------------------
+---------------------------------
+*/
+section h1 {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 4em;
+  color: var(--color-text);
+  margin: 0.2em 0 0;
+}
+
+section h2 {
+  font-family: var(--font-heading);
+  font-size: 3em;
+  color: var(--color-text);
+  margin: 0.2em 0 0;
+}
+
+legend.text-center {
+  font-size: 3em;
+  font-family: var(--font-heading);
+  text-align: center;
+}
+
+/*
+---------------------------------
+---------------------------------
+---- SECTION: Register Form -----
+---------------------------------
+---------------------------------
+*/
+#registration-form {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+#registration-form fieldset {
+  border: 2px solid #ccc;
+  border-radius: var(--border-radius-md);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#registration-form .form-group {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+#registration-form .form-group p {
+  margin-right: 10px;
+}
+
+#registration-form .form-group label {
+  font-weight: bold;
+}
+
+#registration-form .row {
+  display: flex;
+  gap: 10px;
+}
+
+#registration-form .form-control {
+  margin-left: 10px;
+  border-radius: var(--border-radius-sm);
+  padding: 5px;
+}
+
+#gender, #favorite-ic-questionaire {
+  display: flex;
+  margin: 15px 0;
+}
+
+#gender .form-check-input {
+  margin-left: 10px;
+}
+
+#registration-form .button {
+  background-color: var(--color-text);
+  border: none;
+  color: var(--color-light);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: var(--border-radius-sm);
+}
+
+#registration-form .button:hover {
+  background-color: var(--color-primary);
+}
+
+#same-as-deli input[type="checkbox"]{
+  display: block;
+  appearance: outside;
+}
+
+/*
+---------------------------------
+---------------------------------
+---- SECTION: Order Form --------
+---------------------------------
+---------------------------------
+*/
+#order-form h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+#order-form {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+#order-form fieldset {
+  border: 2px solid #ccc;
+  border-radius: var(--border-radius-md);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-check {
+  display: flex;
+  gap: 10px;
+}
+
+#deli-or-pickup .form-check-label {
+  margin-top: 28px;
+  margin-left: 15px;
+}
+
+#deli-or-pickup .form-check-input {
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+}
+
+#order-form .form-control, .form-check-input {
+  margin-left: 10px;
+  border-radius: var(--border-radius-sm);
+  padding: 5px;
+}
+
+#order-form .form-group, #deli-or-pickup, #contact, #credit-card, #payment-method {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+#credit-card .form-group {
+  margin: 1em 0;
+}
+
+#order-form .form-group p, .form-group p {
+  margin-right: 10px;
+}
+
+#order-form .form-group label, #order-form .form-group p {
+  font-weight: bold;
+}
+
+#credit-card-info {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  align-items: flex-start;
+}
+
+#credit-card .form-check {
+  flex: 1;
+  margin-right: 20px;
+}
+
+#credit-card img {
+  width: 100px;
+  height: 60px;
+  margin-right: 2rem;
+}
+
+#caution-frame {
+  border: 2px solid red;
+  padding: 10px;
+  margin: 10px 0;
+  color: red;
+  font-weight: bold;
+}
+
+#order-form .button {
+  background-color: var(--color-text);
+  border: none;
+  color: var(--color-light);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: var(--border-radius-sm);
+}
+
+#order-form .button:hover {
+  background-color: var(--color-primary);
+}
+
+/*
+---------------------------------
+---------------------------------
+----- SECTION: Features ---------
+---------------------------------
+---------------------------------
+*/
+.container {
+  font-family: Arial, sans-serif;
+}
+
+.main-content {
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius-sm);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.main-content h1 {
+  color: beige;
+}
+
+.list-group-item {
+  list-style: none;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-light);
+  border: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.list-group-item:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+
+.list-group-item strong {
+  color: var(--color-accent);
+}
+
+/*
+---------------------------------
+---------------------------------
+---- SECTION: Footer (Menu) -----
+---------------------------------
+---------------------------------
+*/
+footer {
+  text-align: center;
+  font-size: 1em;
+  width: 100%;
+  background: linear-gradient(135deg, #9d8b6f 0%, #7a6b55 100%);
+  color: var(--color-light);
+  padding: var(--spacing-lg) var(--spacing-md);
+  line-height: 1.8;
+  position: relative;
+  bottom: unset;
+  z-index: 0;
+  margin-top: var(--spacing-lg);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  padding: 0 var(--spacing-lg);
+}
+
+.footer-col:first-child {
+  text-align: middle;
+}
+
+.footer-col:last-child {
+  text-align: middle;
+}
+
+.footer-col h3 {
+  font-family: var(--font-heading);
+  font-size: 1.8em;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-light);
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--color-light);
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+footer p {
+  margin: 0.3em 0;
+}
+
+footer address {
+  font-style: normal;
+}
+
+footer address p {
+  margin: 0.4em 0;
+  opacity: 0.9;
+}
+
+footer address i {
+  margin-right: 8px;
+  width: 16px;
+}
+
+footer a {
+  color: var(--color-light);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+footer a:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+/* Footer responsive */
+@media only screen and (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .footer-col {
+    margin-bottom: var(--spacing-sm);
+  }
+}
+
+/*
+---------------------------------
+---------------------------------
+------ SECTION: Responsive ------
+---------------------------------
+---------------------------------
+*/
+@media only screen and (max-width: 1280px) {
+  .banner {
+    background-image: url('banner.png');
+    height: 700px !important;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .banner {
+    height: 830px !important;
+  }
+
+  .menu_body {
+    max-width: 100%;
+  }
+
+  .ice_cream_type img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: var(--border-radius-md);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner {
+    height: 1150px !important;
+  }
+
+  .banner h1 {
+    font-size: 3em;
+    color: var(--color-text);
+    margin-bottom: 0.2em;
+    margin-top: 0;
+  } 
+
+  .banner section {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .menu_body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ice_cream_type {
+    width: 80%;
+    max-width: 350px;
+  }
+
+  .ice_cream_type img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .product-card {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  section h1 {
+    font-size: 3em;
+  }
+  
+  section h2 {
+    font-size: 2em;
+  }
+
+  #registration-form, #order-form {
+    max-width: 100%;
+  }
+
+  #order-form .form-group, #deli-or-pickup, #contact, #credit-card, #payment-method {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #our_story p {
+    font-size: 0.8em;
+  }
+
+  #dropdown-btn {
+    display: block;
+    position: absolute;
+    left: 90%;
+  }
+
+  #icon-dropdown-btn {
+    display: block;
+  }
+
+  input[type="checkbox"]:checked~#navigation_bar {
+    left: 0;
+  }
+
+  #navigation_bar {
+    font-size: 1.2em;
+    position: absolute;
+    left: -100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333;
+    gap: 3em;
+    top: 90px;
+    width: 100%;
+    height: calc(100vh - 50px);
+    transition: 0.5s;
+    z-index: 2;
+  }
+
+  .menu_body {
+    max-width: 100%;
+  }
+
+  .menu_header h1 {
+    font-size: 2em;
+  }
+
+  .ice_cream_type {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .ice_cream_type img {
+    width: 150px;
+    height: 150px;
+  }
+
+  footer {
+    font-size: 0.7em;
+    padding: 10px;
+    line-height: 15px;
+  } 
+
+  section h1 {
+    font-size: 2em;
+  }
+
+  section h2 {
+    font-size: 0.5em;
+  } 
+
+/*
+  ---- Apply Responsive For 2 forms -----
+*/
+  fieldset legend.text-center {
+    font-size: 2em; 
+  }
+/*
+  ---- Apply Responsive For Register forms -----
+*/
+  #registration-form {
+    max-width: 100%;
+  }
+
+  #registration-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: flex-start;
+  }
+
+  #registration-form .form-group p {
+    margin-right: 0;
+    font-size: small;
+  }
+
+  #registration-form .form-group label {
+    font-weight: bold;
+    font-size: small;
+  }
+
+  #registration-form .button {
+    width: 80px;
+    height: 30px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #registration-form .form-control {
+    margin-left: 0;
+    width: 90%; 
+    border-radius: var(--border-radius-sm);
+    padding: 5px;
+  }
+
+  #registration-form fieldset, #order-form fieldset {
+    width: 80%; 
+    height: auto; 
+    min-width: 200px; 
+    margin: 0 auto; 
+  }
+
+/*
+  ---- Apply Responsive For Order forms -----
+*/
+  #order-form {
+    max-width: 90%;
+    margin: 0 auto;
+  } 
+
+  #order-form h2 {
+    font-size: 20px;
+  }
+
+  #order-form .form-control {
+    width: 90%; 
+    margin: 0 auto; 
+  }
+
+  #order-form fieldset {
+    width: 80%; 
+    height: auto; 
+    min-width: 200px; 
+    margin: 0 auto; 
+  }
+
+  .form-check-label {
+    margin-top: 10px;
+    margin-left: 0;
+    font-size: small;
+  }
+
+  .form-group label {
+    font-size: small;
+  }
+
+  #order-form .form-group, #deli-or-pickup, #contact, #credit-card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: flex-start;
+  }
+
+  #credit-card {
+    width: 140px;  
+    height: auto;  
+  }
+
+  #credit-card-info {
+    font-size: small;
+  }
+
+  #order-form .button {
+    width: 100px;
+    height: 50px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/*
+---------------------------------
+---------------------------------
+-SECTION: Form Validation Styles-
+---------------------------------
+---------------------------------
+*/
+
+/* Error message styling */
+.error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 4px;
+  padding: 4px 8px;
+  border-radius: var(--border-radius-sm);
+  background-color: rgba(220, 53, 69, 0.1);
+  display: block;
+}
+
+/* Success state for inputs */
+input:valid:not(:placeholder-shown),
+select:valid:not([value=""]) {
+  border-color: #28a745;
+}
+
+/* Error state for inputs */
+input.error,
+select.error {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25);
+}
+
+/* Password strength meter */
+.password-strength-meter {
+  height: 8px;
+  border-radius: 4px;
+  margin-top: 5px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 8px;
+  color: #fff;
+  padding: 2px 0;
+}
+
+/* Required field indicator */
+.required {
+  color: #dc3545;
+  margin-left: 2px;
+}
+
+/* Focus states for accessibility */
+input:focus,
+select:focus,
+button:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: var(--color-light);
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Improved form field transitions */
+.form-control {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:hover {
+  border-color: var(--color-accent);
+}
+
+/* Tooltip for form help */
+[aria-describedby] {
+  position: relative;
+}
+
+/* Screen reader only class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
