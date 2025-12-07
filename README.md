@@ -19,3 +19,6 @@ A Python project that demonstrates web scraping techniques to extract data from 
 
 ### Recruitment Website For HR
 This project is from my Computing Technology Inquiry Project - COS10026 (Assignment 2) unit at Swinburne University of Technology. A recruitment website designed for HR purposes, featuring job listings, application forms, and company information.
+
+### Software Vulnerability with Reconnaise.ai
+This project is from my Computing Technology Innovation Project - COS30049 (Assignment 1 + 2 + 3) unit at Swinburne University of Technology. It focuses on identifying and addressing software vulnerabilities especially for PHP Code.

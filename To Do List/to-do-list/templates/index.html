@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/script.js" defer></script>
+    <Title>To Do App</Title>
+</head>
+
+<body>
+    <h1>To Do App</h1>
+
+    <form action="add" method="POST">
+        <input type="text" name="content" placeholder="Enter a task">
+        <button id="add_button" type="submit">Add</button>
+    </form>
+
+    <hr>
+
+    {% for todo in To_do_list %}
+    <div class="todo">
+        <p>{{todo.id}}. {{todo.content}}</p>
+
+        {% if todo.completed %}
+        <p>Completed</p>
+        {% else %}
+        <p>Not Completed</p>
+        {% endif %}
+
+        <button class="delete-btn" onclick="location.href='delete/{{todo.id}}'">Delete</button>
+        <button class="delete-btn" onclick="location.href='delete/{{todo.id}}'">Complete</button>
+    </div>
+    {% endfor %}
+</body>
+
+</html>

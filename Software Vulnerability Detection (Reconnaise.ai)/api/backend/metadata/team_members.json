@@ -1,0 +1,42 @@
+[
+	{
+		"name": "Le Hoang Triet Thong",
+		"studentID": "104171146",
+		"persona": [
+			"Team Leader",
+			"Artificial Intelligence Major"
+		]
+	},
+	{
+		"name": "Phan Truong Thinh",
+		"studentID": "104188395",
+		"persona": [
+			"Member",
+			"Software Development Major"
+		]
+	},
+	{
+		"name": "Nguyen Thi Thuy Trang",
+		"studentID": "104177254",
+		"persona": [
+			"Member",
+			"Software Development Major"
+		]
+	},
+	{
+		"name": "Nguyen Ta Minh Triet",
+		"studentID": "104993913",
+		"persona": [
+			"Member",
+			"Software Development Major"
+		]
+	},
+	{
+		"name": "Phan Truong Thinh",
+		"studentID": "105556676",
+		"persona": [
+			"Member",
+			"Software Development Major"
+		]
+	}
+]

@@ -1,0 +1,32 @@
+[
+	{
+		"name": "Logistic Regression",
+		"desc": "Linear classifier with L2 regularization",
+		"confusion_matrix": "docs/confusion_matrix_logistic_regression.png"
+	},
+	{
+		"name": "Random Forest",
+		"desc": "Ensemble of 100 decision trees",
+		"confusion_matrix": "docs/confusion_matrix_random_forest.png"
+	},
+	{
+		"name": "Gradient Boosting",
+		"desc": "Sequential boosting with decision trees",
+		"confusion_matrix": "docs/confusion_matrix_gradient_boosting.png"
+	},
+	{
+		"name": "XGBoost",
+		"desc": "Gradient boosting framework",
+		"confusion_matrix": "docs/confusion_matrix_xgboost.png"
+	},
+	{
+		"name": "LightGBM",
+		"desc": "Fast gradient boosting (LightGBM)",
+		"confusion_matrix": "docs/confusion_matrix_lightgbm.png"
+	},
+	{
+		"name": "Naive Bayes",
+		"desc": "Probabilistic classifier with Laplace smoothing",
+		"confusion_matrix": "docs/confusion_matrix_naive_bayes.png"
+	}
+]

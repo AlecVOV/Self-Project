@@ -1,0 +1,32 @@
+[
+	{
+		"name": "DiverseVul",
+		"desc": "A New Vulnerable Source Code Dataset for Deep Learning Based Vulnerability Detection",
+		"url": "https://github.com/wagner-group/diversevul"
+	},
+	{
+		"name": "PHP-Vulnerabilities",
+		"desc": "datasets of vulnerable php code",
+		"url": "https://github.com/sumeet-darekar/PHP-vulnerabilities-dataset"
+	},
+	{
+		"name": "VulnCode-PHP",
+		"desc": "PHP source code vulnerability datasets in 5 class of vulnerability",
+		"url": "https://github.com/MeleseAwoke/PHP-vulnerability-dataset"
+	},
+	{
+		"name": "CVEfixes Dataset",
+		"desc": "Collection of Vulnerabilities and Their Fixes from Open-Source",
+		"url": "https://www.kaggle.com/datasets/girish17019/cvefixes-vulnerable-and-fixed-code"
+	},
+	{
+		"name": "Cybernative.ai Code Vulnerability and Security Dataset",
+		"desc": "A dataset of synthetic Data Programming by Demonstration (DPO) pairs, focusing on the intricate relationship between secure and insecure code across a variety of programming languages.",
+		"url": "https://huggingface.co/datasets/CyberNative/Code_Vulnerability_Security_DPO"
+	},
+	{
+		"name": "PHP Vulnerability test suite",
+		"desc": "Collection of vulnerable and fixed PHP synthetic test cases expressing specific flaws.",
+		"url": "https://github.com/stivalet/PHP-Vulnerability-test-suite"
+	}
+]

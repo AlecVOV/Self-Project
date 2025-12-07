@@ -1,0 +1,59 @@
+:root {
+	--font: "Barlow", sans-serif;
+	font-size: 16px;
+}
+
+.white {
+	background-color: white;
+}
+
+nav.left {
+	max-width: 250px;
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.custom-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Scan/Input page */
+#scan-form {
+	max-width: 100ch;
+	width: 90%;
+	display: grid;
+}
+
+#scan-form #code-input {
+	height: 40vh;
+}
+
+#input-page #scan-form textarea {
+	font-family: monospace;
+}
+
+#input-page :where(h1, h2) {
+	z-index: 2;
+}
+
+#input-page #result {
+	max-width: 100ch;
+	width: 90%;
+
+}
+
+#input-page #underlay {
+	position: absolute;
+	width: 100%;
+	height: 150%;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1;
+	opacity: 0.5;
+}
